@@ -1,0 +1,43 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+  	<th>Image</th>
+    <th>Title</th>
+    <th>Starts at</th>
+    <th>Ends at</th>
+    <th>All day</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+  	<td><%= image_tag event.avatar.url(:thumb)%></td>
+    <td><%= event.title %></td>
+    <td><%= event.starts_at %></td>
+    <td><%= event.ends_at %></td>
+    <td><%= event.all_day %></td>
+    <td><%= event.description %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'view calendar', calendar_index_path %>
+<br/>
+<%= link_to 'New Event', new_event_path %>
+<blink>
+<h1>Vidlist</h1>  
+
+<object width="640" height="385">  
+<param name="movie" value="kkk">  
+</param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>  
+<embed src=""   
+type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true"    width="640" height="385"></embed></object>  
+</blink>
